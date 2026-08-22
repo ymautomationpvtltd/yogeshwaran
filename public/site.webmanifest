@@ -1,0 +1,17 @@
+{
+  "name": "Yogeshwaran | Managing Director – YM Automation",
+  "short_name": "Yogeshwaran",
+  "description": "Innovator, Entrepreneur, Automation Pioneer. Managing Director at YM Automation Private Limited.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1013",
+  "theme_color": "#0f1013",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

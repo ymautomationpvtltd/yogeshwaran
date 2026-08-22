@@ -1,0 +1,75 @@
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FAFAFA;
+  border-top: 1px solid #ECEEF2;
+  border-bottom: 1px solid #ECEEF2;
+  padding-block: clamp(1.2rem, 2vh, 1.8rem);
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  user-select: none;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 3vw, 4rem);
+  animation: scrollMarquee 28s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #64748B;
+  font-size: clamp(0.85rem, 1vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.marquee-badge:hover {
+  color: #11141A;
+}
+
+.marquee-badge-icon {
+  color: var(--accent-gold);
+}
+
+.marquee-dot {
+  color: #CBD5E1;
+  margin-left: clamp(1rem, 2vw, 2rem);
+  font-size: 1.2em;
+}

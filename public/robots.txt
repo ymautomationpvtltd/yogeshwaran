@@ -1,0 +1,6 @@
+# Robots.txt for Yogeshwaran Portfolio & YM Automation
+User-agent: *
+Allow: /
+
+# Host & Sitemaps
+Sitemap: https://ymautomation.com/sitemap.xml

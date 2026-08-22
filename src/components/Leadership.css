@@ -1,0 +1,114 @@
+.leadership-section {
+  padding-block: clamp(4.5rem, 8vh, 8rem);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ECEEF2;
+}
+
+.leadership-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2.5rem, 5vw, 6rem);
+  align-items: center;
+}
+
+.leadership-left {
+  max-width: clamp(28rem, 38vw, 48rem);
+}
+
+.leadership-title {
+  font-size: clamp(2.2rem, 3.6vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #11141A;
+  margin-bottom: clamp(1rem, 2vh, 1.6rem);
+  letter-spacing: -0.02em;
+}
+
+.leadership-subtitle {
+  font-size: clamp(1.05rem, 1.25vw, 1.45rem);
+  line-height: 1.7;
+  color: #555D6E;
+}
+
+/* Right Column Cards */
+.leadership-right {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.8rem, 1.5vh, 1.3rem);
+}
+
+.leadership-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #ECEEF2;
+  border-radius: var(--radius-md);
+  padding: clamp(1.25rem, 2vh, 2rem) clamp(1.5rem, 2vw, 2.4rem);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.leadership-card:hover,
+.leadership-card.active {
+  background-color: #FEF3D6;
+  border-color: #F3DB94;
+  transform: translateX(0.5rem);
+  box-shadow: 0 0.5rem 1.5rem -0.25rem rgba(245, 158, 11, 0.15);
+}
+
+.leadership-card-body {
+  width: 100%;
+}
+
+.leadership-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.leadership-card-icon {
+  color: var(--accent-gold);
+  width: clamp(1.2rem, 1.4vw, 1.6rem);
+  height: clamp(1.2rem, 1.4vw, 1.6rem);
+  transition: color var(--transition-fast);
+}
+
+.leadership-card.active .leadership-card-icon,
+.leadership-card:hover .leadership-card-icon {
+  color: #11141A;
+}
+
+.leadership-card-title {
+  font-size: clamp(1.2rem, 1.45vw, 1.65rem);
+  font-weight: 700;
+  color: #11141A;
+}
+
+.leadership-card-desc {
+  font-size: clamp(0.95rem, 1.1vw, 1.25rem);
+  line-height: 1.6;
+  color: #555D6E;
+}
+
+.leadership-card.active .leadership-card-desc,
+.leadership-card:hover .leadership-card-desc {
+  color: #2D3748;
+}
+
+@media (max-width: 900px) {
+  .leadership-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .leadership-left {
+    max-width: 100%;
+  }
+
+  .leadership-card:hover,
+  .leadership-card.active {
+    transform: translateX(0.25rem);
+  }
+}

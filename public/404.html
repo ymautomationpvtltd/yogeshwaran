@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found | Yogeshwaran Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      // Single Page Application redirect script for GitHub Pages
+      var pathSegmentsToKeep = 0;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body style="background-color: #0f1013; color: #ffffff; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <div style="text-align: center;">
+      <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Redirecting...</h1>
+      <p style="color: #9ca3af;">Taking you back to Yogeshwaran's portfolio.</p>
+    </div>
+  </body>
+</html>
